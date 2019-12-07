@@ -8,7 +8,125 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* OkraReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */; };
+		D6CA85AFAE368DC5D254A76F /* Pods_OkraReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */; };
+		D8F7C0EA239C3A70003CA0DA /* OkraWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */; };
+		D8F7C11F239C48EC003CA0DA /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F7C100239C48A3003CA0DA /* libReact.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8F7C0FF239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		D8F7C101239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		D8F7C103239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		D8F7C105239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		D8F7C107239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		D8F7C109239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		D8F7C10B239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BDC1FC498900052F4D5;
+			remoteInfo = jsinspector;
+		};
+		D8F7C10D239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
+			remoteInfo = "jsinspector-tvOS";
+		};
+		D8F7C10F239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		D8F7C111239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		D8F7C113239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		D8F7C115239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
+		};
+		D8F7C117239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDEBC6D6214B3E7000DD5AC8;
+			remoteInfo = jsi;
+		};
+		D8F7C119239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDEBC73B214B45A300DD5AC8;
+			remoteInfo = jsiexecutor;
+		};
+		D8F7C11B239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FB6214C9A0900B7C4FE;
+			remoteInfo = "jsi-tvOS";
+		};
+		D8F7C11D239C48A3003CA0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
+			remoteInfo = "jsiexecutor-tvOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -23,9 +141,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		043A97CADB9B4DA1F427FC72 /* Pods-OkraReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraReactNative.debug.xcconfig"; path = "Target Support Files/Pods-OkraReactNative/Pods-OkraReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libOkraReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOkraReactNative.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DDC330F300BB02EA7AFD64 /* Pods-OkraReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraReactNative.release.xcconfig"; path = "Target Support Files/Pods-OkraReactNative/Pods-OkraReactNative.release.xcconfig"; sourceTree = "<group>"; };
+		6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkraReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* OkraReactNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkraReactNative.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkraReactNative.m; sourceTree = "<group>"; };
+		D8F7C0E8239C39CA003CA0DA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkraWebView.m; sourceTree = "<group>"; };
+		D8F7C0EB239C3A86003CA0DA /* OkraWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraWebView.h; sourceTree = "<group>"; };
+		D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		D8F7C124239C588B003CA0DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F7C11F239C48EC003CA0DA /* libReact.a in Frameworks */,
+				D6CA85AFAE368DC5D254A76F /* Pods_OkraReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +178,57 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				D8F7C124239C588B003CA0DA /* AppDelegate.h */,
+				D8F7C0EB239C3A86003CA0DA /* OkraWebView.h */,
+				D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */,
+				D8F7C0E8239C39CA003CA0DA /* Main.storyboard */,
 				B3E7B5881CC2AC0600A0062D /* OkraReactNative.h */,
 				B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				E7438312F7A74F2ABF85CC17 /* Pods */,
+				6ACEA7D230EDCE5EE37249EF /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		6ACEA7D230EDCE5EE37249EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */,
+				6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8F7C0ED239C48A2003CA0DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8F7C100239C48A3003CA0DA /* libReact.a */,
+				D8F7C102239C48A3003CA0DA /* libReact.a */,
+				D8F7C104239C48A3003CA0DA /* libyoga.a */,
+				D8F7C106239C48A3003CA0DA /* libyoga.a */,
+				D8F7C108239C48A3003CA0DA /* libcxxreact.a */,
+				D8F7C10A239C48A3003CA0DA /* libcxxreact.a */,
+				D8F7C10C239C48A3003CA0DA /* libjsinspector.a */,
+				D8F7C10E239C48A3003CA0DA /* libjsinspector-tvOS.a */,
+				D8F7C110239C48A3003CA0DA /* libthird-party.a */,
+				D8F7C112239C48A3003CA0DA /* libthird-party.a */,
+				D8F7C114239C48A3003CA0DA /* libdouble-conversion.a */,
+				D8F7C116239C48A3003CA0DA /* libdouble-conversion.a */,
+				D8F7C118239C48A3003CA0DA /* libjsi.a */,
+				D8F7C11A239C48A3003CA0DA /* libjsiexecutor.a */,
+				D8F7C11C239C48A3003CA0DA /* libjsi-tvOS.a */,
+				D8F7C11E239C48A3003CA0DA /* libjsiexecutor-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7438312F7A74F2ABF85CC17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				043A97CADB9B4DA1F427FC72 /* Pods-OkraReactNative.debug.xcconfig */,
+				60DDC330F300BB02EA7AFD64 /* Pods-OkraReactNative.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "OkraReactNative" */;
 			buildPhases = (
+				0D2E4ECF2D30CE46117681AB /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -95,11 +271,18 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D8F7C0ED239C48A2003CA0DA /* Products */;
+					ProjectRef = D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* OkraReactNative */,
@@ -107,11 +290,152 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D8F7C100239C48A3003CA0DA /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = D8F7C0FF239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C102239C48A3003CA0DA /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = D8F7C101239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C104239C48A3003CA0DA /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = D8F7C103239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C106239C48A3003CA0DA /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = D8F7C105239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C108239C48A3003CA0DA /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = D8F7C107239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C10A239C48A3003CA0DA /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = D8F7C109239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C10C239C48A3003CA0DA /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = D8F7C10B239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C10E239C48A3003CA0DA /* libjsinspector-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsinspector-tvOS.a";
+			remoteRef = D8F7C10D239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C110239C48A3003CA0DA /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = D8F7C10F239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C112239C48A3003CA0DA /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = D8F7C111239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C114239C48A3003CA0DA /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = D8F7C113239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C116239C48A3003CA0DA /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = D8F7C115239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C118239C48A3003CA0DA /* libjsi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsi.a;
+			remoteRef = D8F7C117239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C11A239C48A3003CA0DA /* libjsiexecutor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsiexecutor.a;
+			remoteRef = D8F7C119239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C11C239C48A3003CA0DA /* libjsi-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsi-tvOS.a";
+			remoteRef = D8F7C11B239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8F7C11E239C48A3003CA0DA /* libjsiexecutor-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsiexecutor-tvOS.a";
+			remoteRef = D8F7C11D239C48A3003CA0DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D2E4ECF2D30CE46117681AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OkraReactNative-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F7C0EA239C3A70003CA0DA /* OkraWebView.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* OkraReactNative.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +446,7 @@
 		58B511ED1A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -172,6 +497,7 @@
 		58B511EE1A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -214,9 +540,10 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043A97CADB9B4DA1F427FC72 /* Pods-OkraReactNative.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
@@ -230,6 +557,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DDC330F300BB02EA7AFD64 /* Pods-OkraReactNative.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

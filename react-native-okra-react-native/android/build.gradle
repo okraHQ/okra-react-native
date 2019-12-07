@@ -68,11 +68,15 @@ repositories {
     }
     google()
     jcenter()
+    maven {
+        url 'https://jitpack.io'
+    }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'com.github.okraHQ:okra-android-sdk:0.3-alpha'
 }
 
 def configureReactNativePom(def pom) {

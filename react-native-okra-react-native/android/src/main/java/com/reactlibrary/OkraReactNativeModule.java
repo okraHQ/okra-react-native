@@ -4,6 +4,12 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.ReadableMap;
+import com.okra.widget.Okra;
+import com.okra.widget.models.Enums;
+import com.okra.widget.utils.OkraOptions;
+
+import java.util.ArrayList;
 
 public class OkraReactNativeModule extends ReactContextBaseJavaModule {
 
@@ -27,7 +33,7 @@ public class OkraReactNativeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void openOkraWidget(ReadableMap options){
-        ArrayList  products = new ArrayList<Enums.Product>();
+        ArrayList products = new ArrayList<Enums.Product>();
         for(int index = 0; index < options.getArray("products").size(); index++){
             String product = options.getArray("products").getString(index);
             products.add(Enums.Product.valueOf(product));
