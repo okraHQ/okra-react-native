@@ -8,7 +8,11 @@
 #import <UIKit/UIKit.h>
 
 @interface OkraWebView : UIViewController
-
+@property (nonatomic, retain) NSString *env;
+@property (nonatomic, retain) NSString *token;
+@property (nonatomic, retain) NSString *key;
+@property (nonatomic, retain) NSString *clientName;
+@property (nonatomic, retain) NSMutableArray <NSString *> *products;
 
 @end
 

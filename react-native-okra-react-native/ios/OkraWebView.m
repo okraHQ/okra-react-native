@@ -1,9 +1,10 @@
 #import "OkraWebView.h"
+#import "OkraOptions.h"
 #import <WebKit/WebKit.h>
 
-@interface OkraWebView ()
-
-
+@interface OkraWebView (){
+ OkraOptions *okraOptions;
+}
 @end
 
 @implementation OkraWebView
@@ -17,8 +18,8 @@
     [yourLabel setFont:[UIFont fontWithName: @"Trebuchet MS" size: 14.0f]];
     yourLabel.text = @"this is it";
     [self.view addSubview:yourLabel]; **/
-    
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(screen), CGRectGetHeight(screen))];
     NSString *urlString = @"https://www.google.com";
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

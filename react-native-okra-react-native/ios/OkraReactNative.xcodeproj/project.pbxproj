@@ -11,6 +11,7 @@
 		D6CA85AFAE368DC5D254A76F /* Pods_OkraReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */; };
 		D8F7C0EA239C3A70003CA0DA /* OkraWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */; };
 		D8F7C11F239C48EC003CA0DA /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F7C100239C48A3003CA0DA /* libReact.a */; };
+		D8F7C136239C7365003CA0DA /* OkraOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7C135239C7365003CA0DA /* OkraOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,11 +148,12 @@
 		6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkraReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* OkraReactNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkraReactNative.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkraReactNative.m; sourceTree = "<group>"; };
-		D8F7C0E8239C39CA003CA0DA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkraWebView.m; sourceTree = "<group>"; };
 		D8F7C0EB239C3A86003CA0DA /* OkraWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraWebView.h; sourceTree = "<group>"; };
 		D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		D8F7C124239C588B003CA0DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8F7C135239C7365003CA0DA /* OkraOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkraOptions.m; sourceTree = "<group>"; };
+		D8F7C139239C8AD2003CA0DA /* OkraOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraOptions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +180,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				D8F7C139239C8AD2003CA0DA /* OkraOptions.h */,
+				D8F7C135239C7365003CA0DA /* OkraOptions.m */,
 				D8F7C124239C588B003CA0DA /* AppDelegate.h */,
 				D8F7C0EB239C3A86003CA0DA /* OkraWebView.h */,
 				D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */,
-				D8F7C0E8239C39CA003CA0DA /* Main.storyboard */,
 				B3E7B5881CC2AC0600A0062D /* OkraReactNative.h */,
 				B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F7C0EA239C3A70003CA0DA /* OkraWebView.m in Sources */,
+				D8F7C136239C7365003CA0DA /* OkraOptions.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* OkraReactNative.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
