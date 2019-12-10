@@ -12,7 +12,7 @@
 @property (nonatomic, retain) NSString *token;
 @property (nonatomic, retain) NSString *key;
 @property (nonatomic, retain) NSString *clientName;
-@property (nonatomic, retain) NSMutableArray <NSString *> *products;
+@property (nonatomic, retain) NSArray <NSString *> *products;
 
 @end
 

@@ -20,7 +20,7 @@
     [self.view addSubview:yourLabel]; **/
     CGRect screen = [[UIScreen mainScreen] bounds];
     WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(screen), CGRectGetHeight(screen))];
-    NSString *urlString = @"https://www.google.com";
+    NSString *urlString = [self createWebURL];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
@@ -32,6 +32,54 @@
 }
 
 
+- (NSString *) createWebURL{
+
+    //https://demo-dev.okra.ng/link.html?env=dev&isWebview=true&token=5d8a35224d8113507c7521ac&products=%5B%22auth%22,%22transactions%22%5D&key=c81f3e05-7a5c-5727-8d33-1113a3c7a5e4&clientName=Basey
+    
+    NSString *url = @"https://demo-dev.okra.ng/link.html?";
+    
+    url = [url stringByAppendingString:@"isWebview=true&"];
+    
+    url = [url stringByAppendingString:@"env="];
+    url = [url stringByAppendingString:self.env];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"token="];
+    url = [url stringByAppendingString:self.token];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"products="];
+    url = [url stringByAppendingString: [self convertProductArrayToString : self.products]];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"clientName="];
+    url = [url stringByAppendingString:self.clientName];
+   
+    return url;
+}
+
+- (NSString *) convertProductArrayToString:(NSMutableArray <NSString *>*) products{
+    
+    NSString *formattedArray = @"[";
+   
+    for (int index = 0; index < [products count]; index++){
+        
+        if(index == ([products count] - 1)){
+            //formattedArray.append("\"\(name)\"")
+            formattedArray = [formattedArray stringByAppendingString:[products objectAtIndex:index]];
+        }else{
+           formattedArray = [formattedArray stringByAppendingString:[products objectAtIndex:index]];
+            formattedArray = [formattedArray stringByAppendingString:@", "];
+        }
+        
+    }
+     formattedArray = [formattedArray stringByAppendingString:@"]"];
+ 
+   return formattedArray;
+}
 
 @end
 
