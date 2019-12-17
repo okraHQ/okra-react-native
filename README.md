@@ -8,8 +8,8 @@ This library would help you add Okra widget to your react native android app in 
 ### Install
 1. Clone the git library using:
 
-``` npm
-npm pack
+``` git
+git clone
 ```
 
 2. Pack the library with npm:
