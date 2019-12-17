@@ -18,11 +18,15 @@ npm pack
 ```
 this would create a `tgz` extention file named `react-native-okra-react-native-1.0.0.tgz`. 
 
-3. Install this file in your react native project using the following command:
+3. Run a `pod install` in the ios folder of your project root directory, to install all IOS cocoa pod dependencies. Note: ios would crash if this is not done. 
+
+4. If you plan to have an ios app with react native, you might need to set a swift version in the pod file of your ios directory in your react-native application folder.  
+
+5. Install this file in your react native project using the following command:
 ``` npm
 npm install $path/react-native-okra-react-native-1.0.0.tgz
 ```
-4. Link the native dependecies in the library (okra-react-native is built on native dependencies).
+6. Link the native dependecies in the library (okra-react-native is built on native dependencies).
 In the root of your react-native application, Run:
 
 ``` npm
