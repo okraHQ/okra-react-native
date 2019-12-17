@@ -26,7 +26,7 @@ npm install $path/react-native-okra-react-native-1.0.0.tgz
 In the root of your react-native application, Run:
 
 ``` npm
-react-native link
+$ react-native link react-native-okra-react-native
 ```
 this is the final step needed to install the dependency. 
 
