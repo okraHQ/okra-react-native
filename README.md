@@ -9,7 +9,7 @@ This library would help you add Okra widget to your react native android app in 
 1. Clone the git library using:
 
 ``` git
-git clone
+git clone https://github.com/okraHQ/okra-react-native.git
 ```
 
 2. Pack the library with npm:
@@ -52,6 +52,6 @@ OkraReactNative.openOkraWidget({
 |-----------------------|----------------|---------------------|---------------------|---------------------|
 |  `key `               | `String`       | true                |  undefined          | Your public key from Okra.
 |  `token`              | `String`       | true                |  undefined          | Your pubic Key from okra. Use test key for test mode and live key for live mode
-|  `products`           | `ArrayList<Enums.Product>`| true     |  undefined          | The Okra products you want to use with the widget.
-|  `env`                | `Enums.Environment`| true            |  undefined          | 
+|  `products`           | `Array[String]`| true                |  undefined          | The Okra products you want to use with the widget.
+|  `env`                | `String`       | true                |  undefined          | 
 |  `clientName`         | `String`       | true                |  undefined          | Name of the customer using the widget on the application
