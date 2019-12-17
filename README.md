@@ -22,6 +22,8 @@ this would create a `tgz` extention file named `react-native-okra-react-native-1
 
 4. If you plan to have an ios app with react native, you might need to set a swift version in the pod file of your ios directory in your react-native application folder.  
 
+![All forms page](https://i.imgur.com/1RCECsmr.png)
+
 5. Install this file in your react native project using the following command:
 ``` npm
 npm install $path/react-native-okra-react-native-1.0.0.tgz
