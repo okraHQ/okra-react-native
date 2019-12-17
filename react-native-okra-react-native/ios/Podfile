@@ -7,6 +7,5 @@ target 'OkraReactNative' do
   use_frameworks!
 
   # Pods for OkraReactNative
-  pod 'OkraWidget', '~> 3.0'
 
 end
