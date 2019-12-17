@@ -1,11 +1,11 @@
 # okra-react-native
 
 This is a react native library for implementing okra widget
+
 ### Get Started
 This library would help you add Okra widget to your react native android app in no time. All you need to do is ...
-### Install
-##### gradle
 
+### Install
 1. Clone the git library using:
 
 ``` npm
@@ -34,7 +34,7 @@ this is the final step needed to install the dependency.
 ### Usage
 
 
-``` java
+``` javascript
 import OkraReactNative from 'react-native-okra-react-native'
 
 OkraReactNative.openOkraWidget({
