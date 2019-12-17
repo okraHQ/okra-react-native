@@ -16,11 +16,11 @@ npm pack
 ``` npm
 npm pack
 ```
-this would create a `tgz` extention file. 
+this would create a `tgz` extention file named `react-native-okra-react-native-1.0.0.tgz`. 
 
 3. Install this file in your react native project using the following command:
 ``` npm
-npm install $path/react-native-okra-react.tgz
+npm install $path/react-native-okra-react-native-1.0.0.tgz
 ```
 4. Link the native dependecies in the library (okra-react-native is built on native dependencies).
 In the root of your react-native application, Run:
