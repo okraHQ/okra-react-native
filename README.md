@@ -28,7 +28,7 @@ this would create a `tgz` extention file named `react-native-okra-react-native-1
 ``` npm
 npm install ${path}/react-native-okra-react-native-1.0.0.tgz
 ```
-`${path}` refers to the absolute path `C:\Users\Java\Documents\Github\okra-react-native\react-native-okra-react-native\react-native-okra-react-native-1.0.0.tgz`
+`${path}` refers to the absolute path `C:\Users\Java\Documents\Github\okra-react-native\react-native-okra-react-native\react-native-okra-react-native-1.0.0.tgz` where the packed npm module is located. 
 
 6. Link the native dependecies in the library (okra-react-native is built on native dependencies).
 In the root of your react-native application, Run:
