@@ -1,13 +1,14 @@
 package com.reactlibrary;
 
+import android.widget.Toast;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
-import com.okra.widget.Okra;
-import com.okra.widget.models.Enums;
-import com.okra.widget.utils.OkraOptions;
+import com.reactlibrary.models.Enums;
+import com.reactlibrary.utils.OkraOptions;
 
 import java.util.ArrayList;
 
@@ -39,6 +40,7 @@ public class OkraReactNativeModule extends ReactContextBaseJavaModule {
             products.add(Enums.Product.valueOf(product));
         }
         OkraOptions okraOptions = new OkraOptions(true, options.getString("key"),options.getString("token"), products, Enums.Environment.valueOf(options.getString("environment")),options.getString("clientName"));
-        Okra.create(getReactApplicationContext(), okraOptions);
+        Okra.create(reactContext, okraOptions);
     }
+
 }
