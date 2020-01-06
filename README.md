@@ -29,15 +29,21 @@ npm install ${path}/okra-react-native-expo-1.0.0.tgz
 
 
 ``` javascript
-import OkraReactNative from 'react-native-okra-react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import {OkraView} from 'okra-react-native-expo';
 
-OkraReactNative.openOkraWidget({
-        clientName: 'mark',
-        key : 'c81f3e05-7a5c-5727-8d33-1113a3c7a5e4',
-        token:'5d8a35224d8113507c7521ac',
-        environment: 'sandbox',
-        products: ['auth', 'transactions', 'balance', 'identity']
-      });
+export default function App() {
+  return (
+    <OkraView
+      clientName = "mesut ozil"
+      okraKey = "ea0059da-2d35-56b8-b3df-1280226b920f"
+      token = "5da64ac38e94d862392d092d"
+      products = {["auth","transactions","balance","income"]}
+      onClose = {function(){alert("this is my concept")}}
+    />
+  );
+}
 ```
 
 ## OkraOptions
