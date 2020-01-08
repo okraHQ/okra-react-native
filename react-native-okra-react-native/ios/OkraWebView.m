@@ -34,7 +34,10 @@
 
 - (NSString *) createWebURL{
 
-    //https://demo-dev.okra.ng/link.html?env=dev&isWebview=true&token=5d8a35224d8113507c7521ac&products=%5B%22auth%22,%22transactions%22%5D&key=c81f3e05-7a5c-5727-8d33-1113a3c7a5e4&clientName=Basey
+    //https://demo-dev.okra.ng/link.html?env=dev&isWebview=true&token=5d8a35224d8113507c7521ac&products=%5B%22auth%22,%22transactions%22%5D&key=c81f3e05-7a5c-5727-8d33-1113a3c7a5e4&clientName=Basey'
+    
+    UIDevice *currentDevice = [UIDevice currentDevice];
+    NSString *deviceId = [[currentDevice identifierForVendor] UUIDString];
     
     NSString *url = @"https://demo-dev.okra.ng/link.html?";
     
@@ -57,6 +60,17 @@
     
     url = [url stringByAppendingString:@"clientName="];
     url = [url stringByAppendingString:self.clientName];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"source=RN-ios"];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"uuid="];
+    url = [url stringByAppendingString:deviceId];
+    
+    //http://webhook.site/efd5d5be-3a56-4455-bc51-83ec66f4c2f4?source=RN-ios&uuid=3E24DB28-8DCC-487C-80E7-EBE0DF90EFD4
    
     return url;
 }
