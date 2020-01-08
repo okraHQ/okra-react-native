@@ -69,24 +69,22 @@
     
     url = [url stringByAppendingString:@"uuid="];
     url = [url stringByAppendingString:deviceId];
-    
-    //http://webhook.site/efd5d5be-3a56-4455-bc51-83ec66f4c2f4?source=RN-ios&uuid=3E24DB28-8DCC-487C-80E7-EBE0DF90EFD4
    
     return url;
 }
 
-- (NSString *) convertProductArrayToString:(NSMutableArray <NSString *>*) products{
+- (NSString *) convertProductArrayToString:(NSArray <NSString *>*) products{
     
     NSString *formattedArray = @"[";
    
     for (int index = 0; index < [products count]; index++){
         
         if(index == ([products count] - 1)){
-            //formattedArray.append("\"\(name)\"")
-            formattedArray = [formattedArray stringByAppendingString:[products objectAtIndex:index]];
+            NSString *str = [NSString stringWithFormat:@"%@%@%@", @"%22", [products objectAtIndex:index], @"%22"];
+            formattedArray = [formattedArray stringByAppendingString: str];
         }else{
-           formattedArray = [formattedArray stringByAppendingString:[products objectAtIndex:index]];
-            formattedArray = [formattedArray stringByAppendingString:@", "];
+            NSString *str = [NSString stringWithFormat:@"%@%@%@%@", @"%22", [products objectAtIndex:index], @"%22",@","];
+            formattedArray = [formattedArray stringByAppendingString: str];
         }
         
     }
