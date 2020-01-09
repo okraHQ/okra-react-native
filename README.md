@@ -1,6 +1,6 @@
 # okra-react-native
 
-This is a react native library for implementing okra widget
+This is a react native library for implementing okra widget.
 
 ### Get Started
 This library would help you add Okra widget to your react native android app in no time. All you need to do is ...
@@ -9,7 +9,7 @@ This library would help you add Okra widget to your react native android app in 
 1. Clone the git library using:
 
 ``` git
-git clone https://github.com/okraHQ/okra-react-native.git
+git clone https://github.com/okraHQ/react-native-expo.git
 ```
 
 2. Pack the library with npm:
@@ -77,3 +77,4 @@ OkraReactNative.openOkraWidget({
 |  `products`           | `Array[String]`| true                |  undefined          | The Okra products you want to use with the widget.
 |  `env`                | `String`       | true                |  undefined          | 
 |  `clientName`         | `String`       | true                |  undefined          | Name of the customer using the widget on the application
+

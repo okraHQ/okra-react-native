@@ -34,7 +34,10 @@
 
 - (NSString *) createWebURL{
 
-    //https://demo-dev.okra.ng/link.html?env=dev&isWebview=true&token=5d8a35224d8113507c7521ac&products=%5B%22auth%22,%22transactions%22%5D&key=c81f3e05-7a5c-5727-8d33-1113a3c7a5e4&clientName=Basey
+    //https://demo-dev.okra.ng/link.html?env=dev&isWebview=true&token=5d8a35224d8113507c7521ac&products=%5B%22auth%22,%22transactions%22%5D&key=c81f3e05-7a5c-5727-8d33-1113a3c7a5e4&clientName=Basey'
+    
+    UIDevice *currentDevice = [UIDevice currentDevice];
+    NSString *deviceId = [[currentDevice identifierForVendor] UUIDString];
     
     NSString *url = @"https://demo-dev.okra.ng/link.html?";
     
@@ -57,22 +60,31 @@
     
     url = [url stringByAppendingString:@"clientName="];
     url = [url stringByAppendingString:self.clientName];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"source=RN-ios"];
+    
+    url = [url stringByAppendingString:@"&"];
+    
+    url = [url stringByAppendingString:@"uuid="];
+    url = [url stringByAppendingString:deviceId];
    
     return url;
 }
 
-- (NSString *) convertProductArrayToString:(NSMutableArray <NSString *>*) products{
+- (NSString *) convertProductArrayToString:(NSArray <NSString *>*) products{
     
     NSString *formattedArray = @"[";
    
     for (int index = 0; index < [products count]; index++){
         
         if(index == ([products count] - 1)){
-            //formattedArray.append("\"\(name)\"")
-            formattedArray = [formattedArray stringByAppendingString:[products objectAtIndex:index]];
+            NSString *str = [NSString stringWithFormat:@"%@%@%@", @"%22", [products objectAtIndex:index], @"%22"];
+            formattedArray = [formattedArray stringByAppendingString: str];
         }else{
-           formattedArray = [formattedArray stringByAppendingString:[products objectAtIndex:index]];
-            formattedArray = [formattedArray stringByAppendingString:@", "];
+            NSString *str = [NSString stringWithFormat:@"%@%@%@%@", @"%22", [products objectAtIndex:index], @"%22",@","];
+            formattedArray = [formattedArray stringByAppendingString: str];
         }
         
     }
