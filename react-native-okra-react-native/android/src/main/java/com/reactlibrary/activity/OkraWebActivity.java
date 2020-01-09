@@ -1,11 +1,15 @@
 package com.reactlibrary.activity;
 
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.webkit.WebSettings;
@@ -40,9 +44,11 @@ public class OkraWebActivity extends AppCompatActivity {
         linkInitializeOptions.put("clientName", okraOptions.getClientName());
         linkInitializeOptions.put("uuid", Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
         linkInitializeOptions.put("source", "RN-android");
+        linkInitializeOptions.put("imei", getIMEI(this));
         linkInitializeOptions.put("webhook", "http://requestb.in");
 
         System.out.println("this is the uuid " + linkInitializeOptions.get("uuid"));
+        System.out.println("this is the imei " + linkInitializeOptions.get("imei"));
 
         //https://demo-dev.okra.ng/link.html?isWebview=true&key=c81f3e05-7a5c-5727-8d33-1113a3c7a5e4&token=5d8a35224d8113507c7521ac&products=[%22auth%22,%22transactions%22,%22balance%22]&env=dev&clientName=Spinach
         linkInitializeOptions.put("baseUrl", "https://demo-dev.okra.ng/link.html");
@@ -119,9 +125,7 @@ public class OkraWebActivity extends AppCompatActivity {
     }
 
     public String convertArrayListToString(ArrayList<Enums.Product> productList){
-
         StringBuilder formattedArray = new StringBuilder("[");
-
         for (int index = 0; index < productList.size(); index++){
             if(index == (productList.size() - 1)){
                 formattedArray.append(String.format("\"%s\"", productList.get(index)));
@@ -129,8 +133,16 @@ public class OkraWebActivity extends AppCompatActivity {
                 formattedArray.append(String.format("\"%s\",", productList.get(index)));
             }
         }
-
         formattedArray.append("]");
         return formattedArray.toString();
+    }
+
+    public String getIMEI(Activity activity) {
+        TelephonyManager telephonyManager = (TelephonyManager) activity.getSystemService(Context.TELEPHONY_SERVICE);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            return "";
+        }
+        if(telephonyManager == null) return "";
+        return telephonyManager.getDeviceId() == null ? "" : telephonyManager.getDeviceId();
     }
 }

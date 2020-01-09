@@ -40,7 +40,7 @@ public class OkraReactNativeModule extends ReactContextBaseJavaModule {
             products.add(Enums.Product.valueOf(product));
         }
         OkraOptions okraOptions = new OkraOptions(true, options.getString("key"),options.getString("token"), products, Enums.Environment.valueOf(options.getString("environment")),options.getString("clientName"));
-        Okra.create(reactContext, okraOptions);
+        Okra.create(getCurrentActivity(), okraOptions);
     }
 
 }
