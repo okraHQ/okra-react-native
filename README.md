@@ -9,7 +9,7 @@ This library would help you add Okra widget to your react native android app in 
 1. Clone the git library using:
 
 ``` git
-git clone https://github.com/okraHQ/react-native-expo.git
+git clone https://github.com/okraHQ/okra-react-native.git
 ```
 
 2. Pack the library with npm:
