@@ -65,6 +65,23 @@ OkraReactNative.openOkraWidget({
         token:'5d8a35224d8113507c7521ac',
         environment: 'sandbox',
         products: ['auth', 'transactions', 'balance', 'identity']
+        options: {},
+        source: 'link',
+        color:  '#2542a5',
+        limit: '24',
+        corporate: false,
+        connectMessage: 'Which account do you want to connect with?',
+        guarantors: {"status":false,"message":"","number":0},
+        callback_url: 'https://dev-api.okra.ng/v1/callback',
+        redirect_url: '',
+        logo: 'https://okra-identity-images-dev.s3.amazonaws.com/1587082961792.png',
+        filter: {"industry_type":"all","banks":["ecobank-nigeria","fidelity-bank","first-bank-of-nigeria","first-city-monument-bank","guaranty-trust-bank","heritage-bank","polaris-bank","stanbic-ibtc-bank","standard-chartered-bank","sterling-bank","union-bank-of-nigeria","united-bank-for-africa","wema-bank","unity-bank","alat","access-bank"]},
+        widget_success: 'Your account was successfully linked to Okra, Inc',
+        widget_failed: 'An unknown error occurred, please try again.',
+        currency: 'NGN', 
+        exp: '', 
+        success_title: '', 
+        success_message: '',
       });
 ```
 
