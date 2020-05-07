@@ -1,7 +1,12 @@
 package com.reactlibrary.utils;
 
 import com.facebook.react.bridge.ReadableMap;
+import com.reactlibrary.models.Enums;
+import com.reactlibrary.models.Filter;
 import com.reactlibrary.models.Guarantor;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class GeneralUtils {
 
@@ -56,11 +61,31 @@ public class GeneralUtils {
         }
 
         if(options.hasKey("guarantors")) {
-            boolean status = options.getMap("guarantors").getBoolean("status");
-            String message = options.getMap("guarantors").getString("message");
-            int number = options.getMap("guarantors").getInt("number");
+           try{
+               boolean status = options.getMap("guarantors").hasKey("status") && options.getMap("guarantors").getBoolean("status");
+               String message = options.getMap("guarantors").hasKey("message") ? options.getMap("guarantors").getString("message") : "";
+               int number =  options.getMap("guarantors").hasKey("message") ? options.getMap("guarantors").getInt("number") : 3;
 
-            okraOptions.setGuarantors(new Guarantor(status, message, number));
+               okraOptions.setGuarantors(new Guarantor(status, message, number));
+
+           }catch (Exception exception){
+               okraOptions.setGuarantors(new Guarantor(false, "", 3));
+           }
+        }
+
+        if(options.hasKey("filter")) {
+            ArrayList<String> banks = new ArrayList<>();
+            try{
+                String industry_type =  options.getMap("filter").hasKey("industry_type") ? options.getMap("filter").getString("industry_type") : Enums.IndustryType.all.toString();
+                if(options.getMap("filter").hasKey("banks")){
+                    for(int index = 0; index < options.getMap("filter").getArray("banks").size(); index++){
+                        banks.add( options.getMap("filter").getArray("banks").getString(index));
+                    }
+                }
+                okraOptions.setFilter(new Filter(industry_type, banks));
+            }catch (Exception exception){
+                okraOptions.setFilter(new Filter(Enums.IndustryType.all.name(), banks));
+            }
         }
 
         return okraOptions;

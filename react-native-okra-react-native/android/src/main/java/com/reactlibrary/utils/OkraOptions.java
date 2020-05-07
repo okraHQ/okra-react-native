@@ -2,6 +2,7 @@ package com.reactlibrary.utils;
 
 
 import com.reactlibrary.models.Enums;
+import com.reactlibrary.models.Filter;
 import com.reactlibrary.models.Guarantor;
 
 import java.io.Serializable;
@@ -52,10 +53,11 @@ OkraOptions implements Serializable {
     private String callback_url;
     private String redirect_url;
     private String logo;
-    //filter: ${JSON.stringify(filter)},
+    private Filter filter;
     private String widget_success;
     private String currency;
     private String exp;
+    private String device = "android";
     private String success_title;
     private String success_message;
     private String imei;
@@ -236,4 +238,11 @@ OkraOptions implements Serializable {
         this.imei = imei;
     }
 
+    public Filter getFilter() {
+        return filter;
+    }
+
+    public void setFilter(Filter filter) {
+        this.filter = filter;
+    }
 }

@@ -42,7 +42,7 @@ public class OkraWebActivity extends AppCompatActivity {
         okraLinkWebview.addJavascriptInterface(new WebInterface(this, okraOptions), "Android");
 
 
-        okraLinkWebview.loadUrl("https://app.okra.ng/mobile.html"); //http://e630adb5.ngrok.io/mobile.html
+        okraLinkWebview.loadUrl("https://mobile.okra.ng/");
 
         okraLinkWebview.setWebViewClient(new WebViewClient() {
             @Override
