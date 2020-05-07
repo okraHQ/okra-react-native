@@ -2,6 +2,7 @@ package com.reactlibrary.utils;
 
 
 import com.reactlibrary.models.Enums;
+import com.reactlibrary.models.Guarantor;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -37,6 +38,27 @@ OkraOptions implements Serializable {
     private Enums.Environment env;
     private String clientName;
     private String webhook;
+    private String source = "react-native";
+    private String color;
+
+
+
+
+
+    private String limit;
+    private boolean isCorporate;
+    private String connectMessage;
+    private Guarantor guarantors;
+    private String callback_url;
+    private String redirect_url;
+    private String logo;
+    //filter: ${JSON.stringify(filter)},
+    private String widget_success;
+    private String currency;
+    private String exp;
+    private String success_title;
+    private String success_message;
+    private String imei;
 
     public boolean isWebview() {
         return isWebview;
@@ -93,5 +115,125 @@ OkraOptions implements Serializable {
     public void setWebhook(String webhook) {
         this.webhook = webhook;
     }
-}
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getLimit() {
+        return limit;
+    }
+
+    public void setLimit(String limit) {
+        this.limit = limit;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public boolean isCorporate() {
+        return isCorporate;
+    }
+
+    public void setCorporate(boolean corporate) {
+        isCorporate = corporate;
+    }
+
+    public String getConnectMessage() {
+        return connectMessage;
+    }
+
+    public void setConnectMessage(String connectMessage) {
+        this.connectMessage = connectMessage;
+    }
+
+    public Guarantor getGuarantors() {
+        return guarantors;
+    }
+
+    public void setGuarantors(Guarantor guarantors) {
+        this.guarantors = guarantors;
+    }
+
+    public String getCallback_url() {
+        return callback_url;
+    }
+
+    public void setCallback_url(String callback_url) {
+        this.callback_url = callback_url;
+    }
+
+    public String getRedirect_url() {
+        return redirect_url;
+    }
+
+    public void setRedirect_url(String redirect_url) {
+        this.redirect_url = redirect_url;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getWidget_success() {
+        return widget_success;
+    }
+
+    public void setWidget_success(String widget_success) {
+        this.widget_success = widget_success;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getExp() {
+        return exp;
+    }
+
+    public void setExp(String exp) {
+        this.exp = exp;
+    }
+
+    public String getSuccess_title() {
+        return success_title;
+    }
+
+    public void setSuccess_title(String success_title) {
+        this.success_title = success_title;
+    }
+
+    public String getSuccess_message() {
+        return success_message;
+    }
+
+    public void setSuccess_message(String success_message) {
+        this.success_message = success_message;
+    }
+
+    public String getImei() {
+        return imei;
+    }
+
+    public void setImei(String imei) {
+        this.imei = imei;
+    }
+
+}
