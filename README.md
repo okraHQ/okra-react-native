@@ -57,6 +57,8 @@ this is the final step needed to install the dependency.
 
 
 ``` javascript
+import {DeviceEventEmitter} from 'react-native';
+
 import OkraReactNative from 'react-native-okra-react-native'
 
 OkraReactNative.openOkraWidget({
@@ -83,6 +85,21 @@ OkraReactNative.openOkraWidget({
         success_title: '', 
         success_message: '',
       });
+      
+  DeviceEventEmitter.addListener('onSuccess',
+    (e) => {
+      console.log("onSuccess ", e);
+    })
+  DeviceEventEmitter.addListener('onError',
+    (e) => {
+      console.log("onError ", e);
+    }
+  )
+  DeviceEventEmitter.addListener('onClose',
+    (e) => {
+      console.log("onClose ", e);
+    }
+  )
 ```
 
 ## OkraOptions
