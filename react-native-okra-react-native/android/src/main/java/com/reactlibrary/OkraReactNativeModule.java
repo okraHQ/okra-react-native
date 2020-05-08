@@ -8,6 +8,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
 import com.reactlibrary.models.Enums;
+import com.reactlibrary.utils.GeneralUtils;
 import com.reactlibrary.utils.OkraOptions;
 
 import java.util.ArrayList;
@@ -40,7 +41,8 @@ public class OkraReactNativeModule extends ReactContextBaseJavaModule {
             products.add(Enums.Product.valueOf(product));
         }
         OkraOptions okraOptions = new OkraOptions(true, options.getString("key"),options.getString("token"), products, Enums.Environment.valueOf(options.getString("environment")),options.getString("clientName"));
-        Okra.create(getCurrentActivity(), okraOptions);
+        GeneralUtils.parseToOkraOptions(okraOptions, options);
+        Okra.create(getReactApplicationContext(), getCurrentActivity(), okraOptions);
     }
 
 }
