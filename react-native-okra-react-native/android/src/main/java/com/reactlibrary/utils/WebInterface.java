@@ -2,18 +2,17 @@ package com.reactlibrary.utils;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.webkit.JavascriptInterface;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.reactlibrary.Okra;
-import com.reactlibrary.handlers.OkraHandler;
 
 public class WebInterface {
-    Context mContext;
-    OkraOptions okraOptions;
+    private Context mContext;
 
     // Instantiate the interface and set the context
-    public WebInterface(Context c, OkraOptions okraOptions) {
-        mContext = c;
-        this.okraOptions = okraOptions;
+    public WebInterface(Context context) {
+        mContext = context;
     }
 
     @JavascriptInterface
@@ -24,18 +23,42 @@ public class WebInterface {
 
     @JavascriptInterface
     public void onSuccess(String json) {
-        OkraHandler.data = json;
-        OkraHandler.isSuccessful = true;
-        OkraHandler.isDone = true;
+        try {
+            Okra.reactApplicationContext
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("onSuccess", json);
+        } catch (Exception e){
+            generalError(e.getMessage());
+        }
     }
 
     @JavascriptInterface
     public void onError(String json) {
-        OkraHandler.data = json;
-        OkraHandler.hasError = true;
-        OkraHandler.isDone = true;
+        try {
+            Okra.reactApplicationContext
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("onError", json);
+        } catch (Exception e){
+            generalError(e.getMessage());
+        }
     }
 
     @JavascriptInterface
-    public void onClose(String json) {}
+    public void onClose(String json) {
+        try {
+            Okra.reactApplicationContext
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("onClose", json);
+        } catch (Exception e){
+            generalError(e.getMessage());
+        }
+    }
+
+    private void generalError(String error){
+        try {
+            Okra.reactApplicationContext
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("onClose", error);
+        } catch (Exception ignored){}
+    }
 }

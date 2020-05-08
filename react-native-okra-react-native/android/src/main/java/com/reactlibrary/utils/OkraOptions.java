@@ -39,7 +39,7 @@ OkraOptions implements Serializable {
     private Enums.Environment env;
     private String clientName;
     private String webhook;
-    private String source = "react-native";
+    private String source = "android";
     private String color;
 
 

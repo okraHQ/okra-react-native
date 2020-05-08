@@ -18,7 +18,6 @@ import android.webkit.WebViewClient;
 import com.google.gson.Gson;
 import com.reactlibrary.Okra;
 import com.reactlibrary.R;
-import com.reactlibrary.handlers.OkraHandler;
 import com.reactlibrary.utils.OkraOptions;
 import com.reactlibrary.utils.WebInterface;
 
@@ -39,7 +38,7 @@ public class OkraWebActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
-        okraLinkWebview.addJavascriptInterface(new WebInterface(this, okraOptions), "Android");
+        okraLinkWebview.addJavascriptInterface(new WebInterface(this), "Android");
 
 
         okraLinkWebview.loadUrl("https://mobile.okra.ng/");
@@ -53,7 +52,6 @@ public class OkraWebActivity extends AppCompatActivity {
                 Boolean shouldClose = Boolean.valueOf(linkData.get("shouldClose"));
                 if (shouldClose) {
                     Intent intent = new Intent(OkraWebActivity.this, Okra.baseContext.getClass());
-                    intent.putExtra("okraHandler", new OkraHandler());
                     startActivity(intent);
                 } else {
                     return false;
@@ -88,7 +86,7 @@ public class OkraWebActivity extends AppCompatActivity {
                 return "null";
             }else {
                 if (telephonyManager == null) return "null";
-                return telephonyManager.getDeviceId() == "null" ? "" : telephonyManager.getDeviceId();
+                return telephonyManager.getDeviceId() == null ? "" : telephonyManager.getDeviceId();
             }
         }catch (Exception exception){
             return "";
