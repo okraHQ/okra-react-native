@@ -76,6 +76,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'com.google.code.gson:gson:2.8.6'
 }
 
