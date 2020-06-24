@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DE6358B24A00C1500CD1ACD /* Okra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6358A24A00C1500CD1ACD /* Okra.swift */; };
+		5DE6358D24A00C9300CD1ACD /* OkraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6358C24A00C9300CD1ACD /* OkraWebView.swift */; };
+		5DE6359024A00D0600CD1ACD /* OkraOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6358F24A00D0600CD1ACD /* OkraOptions.swift */; };
+		5DE6359224A00D2900CD1ACD /* OkraOptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6359124A00D2900CD1ACD /* OkraOptionParser.swift */; };
+		5DE6359424A00D6300CD1ACD /* GuarantorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6359324A00D6300CD1ACD /* GuarantorParser.swift */; };
+		5DE6359724A00DC200CD1ACD /* Guarantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6359624A00DC200CD1ACD /* Guarantor.swift */; };
+		5DE6359924A00DE900CD1ACD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6359824A00DE900CD1ACD /* Enums.swift */; };
+		5DE6359B24A0704B00CD1ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6359A24A0704B00CD1ACD /* AppDelegate.swift */; };
 		B3E7B58A1CC2AC0600A0062D /* OkraReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */; };
-		D6CA85AFAE368DC5D254A76F /* Pods_OkraReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */; };
-		D8F7C0EA239C3A70003CA0DA /* OkraWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */; };
 		D8F7C11F239C48EC003CA0DA /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F7C100239C48A3003CA0DA /* libReact.a */; };
-		D8F7C136239C7365003CA0DA /* OkraOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7C135239C7365003CA0DA /* OkraOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,18 +147,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		043A97CADB9B4DA1F427FC72 /* Pods-OkraReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraReactNative.debug.xcconfig"; path = "Target Support Files/Pods-OkraReactNative/Pods-OkraReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libOkraReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOkraReactNative.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		60DDC330F300BB02EA7AFD64 /* Pods-OkraReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraReactNative.release.xcconfig"; path = "Target Support Files/Pods-OkraReactNative/Pods-OkraReactNative.release.xcconfig"; sourceTree = "<group>"; };
-		6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkraReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* OkraReactNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkraReactNative.h; sourceTree = "<group>"; };
+		5DE6358924A00C1400CD1ACD /* OkraReactNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OkraReactNative-Bridging-Header.h"; sourceTree = "<group>"; };
+		5DE6358A24A00C1500CD1ACD /* Okra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Okra.swift; sourceTree = "<group>"; };
+		5DE6358C24A00C9300CD1ACD /* OkraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraWebView.swift; sourceTree = "<group>"; };
+		5DE6358F24A00D0600CD1ACD /* OkraOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraOptions.swift; sourceTree = "<group>"; };
+		5DE6359124A00D2900CD1ACD /* OkraOptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraOptionParser.swift; sourceTree = "<group>"; };
+		5DE6359324A00D6300CD1ACD /* GuarantorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuarantorParser.swift; sourceTree = "<group>"; };
+		5DE6359624A00DC200CD1ACD /* Guarantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guarantor.swift; sourceTree = "<group>"; };
+		5DE6359824A00DE900CD1ACD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		5DE6359A24A0704B00CD1ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkraReactNative.m; sourceTree = "<group>"; };
-		D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkraWebView.m; sourceTree = "<group>"; };
-		D8F7C0EB239C3A86003CA0DA /* OkraWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraWebView.h; sourceTree = "<group>"; };
 		D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		D8F7C124239C588B003CA0DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D8F7C135239C7365003CA0DA /* OkraOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkraOptions.m; sourceTree = "<group>"; };
-		D8F7C139239C8AD2003CA0DA /* OkraOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraOptions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F7C11F239C48EC003CA0DA /* libReact.a in Frameworks */,
-				D6CA85AFAE368DC5D254A76F /* Pods_OkraReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,24 +184,41 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				D8F7C139239C8AD2003CA0DA /* OkraOptions.h */,
-				D8F7C135239C7365003CA0DA /* OkraOptions.m */,
-				D8F7C124239C588B003CA0DA /* AppDelegate.h */,
-				D8F7C0EB239C3A86003CA0DA /* OkraWebView.h */,
-				D8F7C0E9239C3A70003CA0DA /* OkraWebView.m */,
-				B3E7B5881CC2AC0600A0062D /* OkraReactNative.h */,
+				5DE6359A24A0704B00CD1ACD /* AppDelegate.swift */,
+				5DE6358924A00C1400CD1ACD /* OkraReactNative-Bridging-Header.h */,
+				5DE6359524A00DB600CD1ACD /* models */,
+				5DE6358E24A00CE400CD1ACD /* utils */,
+				5DE6358C24A00C9300CD1ACD /* OkraWebView.swift */,
+				5DE6358A24A00C1500CD1ACD /* Okra.swift */,
 				B3E7B5891CC2AC0600A0062D /* OkraReactNative.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
-				E7438312F7A74F2ABF85CC17 /* Pods */,
 				6ACEA7D230EDCE5EE37249EF /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		5DE6358E24A00CE400CD1ACD /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DE6358F24A00D0600CD1ACD /* OkraOptions.swift */,
+				5DE6359124A00D2900CD1ACD /* OkraOptionParser.swift */,
+				5DE6359324A00D6300CD1ACD /* GuarantorParser.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		5DE6359524A00DB600CD1ACD /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5DE6359624A00DC200CD1ACD /* Guarantor.swift */,
+				5DE6359824A00DE900CD1ACD /* Enums.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		6ACEA7D230EDCE5EE37249EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D8F7C0EC239C48A2003CA0DA /* React.xcodeproj */,
-				6CBAE6C6CB38B6802D309D4B /* Pods_OkraReactNative.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,15 +246,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E7438312F7A74F2ABF85CC17 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				043A97CADB9B4DA1F427FC72 /* Pods-OkraReactNative.debug.xcconfig */,
-				60DDC330F300BB02EA7AFD64 /* Pods-OkraReactNative.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,7 +253,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "OkraReactNative" */;
 			buildPhases = (
-				0D2E4ECF2D30CE46117681AB /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -266,6 +277,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -408,39 +420,20 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0D2E4ECF2D30CE46117681AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OkraReactNative-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F7C0EA239C3A70003CA0DA /* OkraWebView.m in Sources */,
-				D8F7C136239C7365003CA0DA /* OkraOptions.m in Sources */,
+				5DE6359B24A0704B00CD1ACD /* AppDelegate.swift in Sources */,
+				5DE6359424A00D6300CD1ACD /* GuarantorParser.swift in Sources */,
+				5DE6359924A00DE900CD1ACD /* Enums.swift in Sources */,
+				5DE6359724A00DC200CD1ACD /* Guarantor.swift in Sources */,
+				5DE6358B24A00C1500CD1ACD /* Okra.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* OkraReactNative.m in Sources */,
+				5DE6358D24A00C9300CD1ACD /* OkraWebView.swift in Sources */,
+				5DE6359024A00D0600CD1ACD /* OkraOptions.swift in Sources */,
+				5DE6359224A00D2900CD1ACD /* OkraOptionParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,35 +537,42 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 043A97CADB9B4DA1F427FC72 /* Pods-OkraReactNative.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = OkraReactNative;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OkraReactNative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60DDC330F300BB02EA7AFD64 /* Pods-OkraReactNative.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = OkraReactNative;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OkraReactNative-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
