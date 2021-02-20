@@ -5,11 +5,13 @@ import WebKit
 
 class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegate {
     
-    public var okraOptions: OkraOptions!
+   
     
     public var baseController : UIViewController?
     
     var linkOptions = [String: String]()
+    
+    public var dataDictionary: [String:Any]!
     
 
     @IBOutlet var web: WKWebView!
@@ -35,13 +37,14 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     
     func webView(_ webView: WKWebView, didFinish  navigation: WKNavigation!)
     {
-        do{
-            let okraOptionsEncoded = okraOptions.encode()
-            let jsonEncoder = JSONEncoder()
-            let jsonData = try jsonEncoder.encode(okraOptionsEncoded)
-            let json = String(data: jsonData, encoding: String.Encoding.utf8)
-            web.evaluateJavaScript("openOkraWidget('"+json!+"')", completionHandler: { (object,error) in})
-        }catch{}
+        if let theJSONData = try?  JSONSerialization.data(
+            withJSONObject: dataDictionary ?? [:],
+            options: .sortedKeys
+              ),
+              let json = String(data: theJSONData,
+                                       encoding: String.Encoding.utf8) {
+            web.evaluateJavaScript("openOkraWidget('"+json+"')", completionHandler: { (object,error) in})
+            }
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {

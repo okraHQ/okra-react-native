@@ -7,12 +7,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -23,19 +27,35 @@ import com.reactlibrary.R;
 import com.reactlibrary.utils.OkraOptions;
 import com.reactlibrary.utils.WebInterface;
 
+import org.json.JSONObject;
+
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class OkraWebActivity extends AppCompatActivity {
 
+    Map<String, Object> generalmapOkraOptions;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
-        final OkraOptions okraOptions = (OkraOptions) getIntent().getSerializableExtra("okraOptions");
-        okraOptions.setImei(getIMEI(this));
-
+        final Map<String, Object> mapOkraOptions = (Map<String, Object>) getIntent().getSerializableExtra("okraOptions");
+        generalmapOkraOptions = mapOkraOptions;
+        if(getIntent().hasExtra("okraOptions")){
+            Map<String, Object> deviceInfo = new HashMap<>();
+            deviceInfo.put("deviceName", Build.BRAND);
+            deviceInfo.put("deviceModel", Build.MODEL);
+            deviceInfo.put("longitude", 0.0);
+            deviceInfo.put("latitude", 0.0);
+            deviceInfo.put("platform", "android");
+            mapOkraOptions.put("uuid", Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
+            mapOkraOptions.put("deviceInfo", deviceInfo);
+            mapOkraOptions.put("isWebview", true);
+            mapOkraOptions.put("source", "rn-android");
+        }
         final WebView okraLinkWebview = findViewById(R.id.ok_webview);
+      //  final ProgressBar progressBar = findViewById(R.id.progressBar);
         WebSettings webSettings = okraLinkWebview.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
@@ -62,11 +82,12 @@ public class OkraWebActivity extends AppCompatActivity {
             }
 
             public void onPageFinished(WebView view, String weburl){
-                System.out.println(new Gson().toJson(okraOptions));
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-                    okraLinkWebview.evaluateJavascript("openOkraWidget("+"'"+new Gson().toJson(okraOptions)+"'"+");", null);
+               // progressBar.setVisibility(View.GONE);
+                String rr = new JSONObject(mapOkraOptions).toString();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    okraLinkWebview.evaluateJavascript("openOkraWidget("+"'"+new JSONObject(mapOkraOptions).toString()+"'"+");", null);
                 } else {
-                    okraLinkWebview.loadUrl("openOkraWidget("+"'"+new Gson().toJson(okraOptions)+"'"+");");
+                    okraLinkWebview.loadUrl("openOkraWidget("+"'"+new JSONObject(mapOkraOptions).toString()+"'"+");");
                 }
             }
         });

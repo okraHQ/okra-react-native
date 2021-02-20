@@ -12,6 +12,8 @@ import com.reactlibrary.utils.GeneralUtils;
 import com.reactlibrary.utils.OkraOptions;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class OkraReactNativeModule extends ReactContextBaseJavaModule {
 
@@ -34,14 +36,7 @@ public class OkraReactNativeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void openOkraWidget(ReadableMap options){
-        ArrayList products = new ArrayList<Enums.Product>();
-        for(int index = 0; index < options.getArray("products").size(); index++){
-            String product = options.getArray("products").getString(index);
-            products.add(Enums.Product.valueOf(product));
-        }
-        OkraOptions okraOptions = new OkraOptions(true, options.getString("key"),options.getString("token"), products, Enums.Environment.valueOf(options.getString("environment")).toString(),options.getString("clientName"));
-        GeneralUtils.parseToOkraOptions(okraOptions, options);
+    public void openOkraWidget(Map<String, Object> okraOptions){
         Okra.create(getReactApplicationContext(), getCurrentActivity(), okraOptions);
     }
 
