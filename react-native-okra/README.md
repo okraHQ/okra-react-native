@@ -6,14 +6,14 @@ This is a react native library for **expo** users to help implement okra widget
 This library would help you add Okra widget to your react native IOS/Android app in no time. 
 
 ### Install Okra-Expo
-1. install react-native-okra-expo
+1. install react-native-okra
 ``` npm
-$ npm install react-native-okra-expo@2.0.7-beta.1
+$ npm install react-native-okra@0.0.1
 ```
 
-2. link react-native-okra-expo
+2. link react-native-okra
 ``` npm
-$ react-native link react-native-okra-expo
+$ react-native link react-native-okra
 ```
 
 3. Pod install: enter the ios directory in the root directory the project and run:
@@ -38,7 +38,7 @@ $ react-native link react-native-webview
 npm install --save react-native-device-info
 ```
 
-4. link react-native-okra-expo
+4. link react-native-okra
 ``` npm
 $ react-native link react-native-device-info
 ```
