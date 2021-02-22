@@ -33,7 +33,7 @@
     "react": "^16.8.1",
     "react-native": ">=0.60.0-rc.0 <1.0.x",
     "react-native-device-info": "^6.2.0",
-    "react-native-webview": "^10.9.0"
+    "react-native-webview": "^11.0.0"
   },
   "devDependencies": {
     "react": "^16.9.0",
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "react-native-device-info": "^6.2.0",
-    "react-native-webview": "^10.9.0"
+    "react-native-webview": "^11.0.0"
   }
 }
