@@ -9,15 +9,15 @@
     "android",
     "index.js",
     "ios",
-    "react-native-okra-expo.podspec"
+    "react-native-okra.podspec"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-okra-expo.git",
-    "baseUrl": "https://github.com/github_account/react-native-okra-expo"
+    "url": "git+https://github.com/github_account/okra-react-native",
+    "baseUrl": "https://github.com/okraHQ/okra-react-native"
   },
   "keywords": [
     "react-native"
