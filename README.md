@@ -1,6 +1,6 @@
 # okra-react-native
 
-This is a react native library for **expo** users to help implement okra widget
+This is a react native library for **non-expo** users to help implement okra widget
 
 ### Get Started
 This library would help you add Okra widget to your react native IOS/Android app in no time. 
@@ -8,7 +8,7 @@ This library would help you add Okra widget to your react native IOS/Android app
 ### Install Okra-Expo
 1. install react-native-okra
 ``` npm
-$ npm install react-native-okra@0.0.1
+$ npm install react-native-okra@0.0.2
 ```
 
 2. link react-native-okra
@@ -50,53 +50,10 @@ $ pod install
 
 
 
-### Usage for version 2.0.6-beta.1 and below
 
-``` javascript
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import OkraView from 'react-native-okra-expo';
 
-export default function App() {
-  return (
-    <OkraView
-        callback_url=""
-        clientName="client"
-        color="#953ab7"
-        connectMessage="Which account do you want to connect with?"
-        currency="USD"
-        env="production" // for sandbox use production-sandbox
-        exp="2020-08-06"
-        filter={{
-          banks: ['access-bank', 'guaranty-trust-bank'],
-          industry_type: 'all',
-        }}
-        isCorporate={false}
-        public_key="1ee202-332-eued-3d33ee"
-        limit="24"
-        logo="https://cdn.okra.ng/images/icon.svg"
-        products={['auth', 'balance', 'transactions']}
-        redirect_url="redirect"
-        success_message="this is the success message"
-        success_title="it has entered success"
-        token="5ecfd65b45006210334e35ce"
-        widget_failed=""
-        widget_success="Your account was successfully linked to Okra, Inc"
-        onClose={response => {
-          console.log('it hit on close');
-        }}
-        onSuccess={response => {
-          console.log('it hit on success', response);
-        }}
-        onError={response => {
-          console.log('it hit on error');
-        }}
-    />
-  );
-}
-```
 
-### Usage for version 2.0.7-beta.1 and above
+### Usage 
 
 ``` javascript
 import React from 'react';

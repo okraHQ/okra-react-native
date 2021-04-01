@@ -1,7 +1,7 @@
 {
   "name": "react-native-okra",
   "title": "React Native Okra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Okra widget v2 beta version",
   "main": "index.js",
   "files": [
