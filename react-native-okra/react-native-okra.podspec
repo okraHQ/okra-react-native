@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   react-native-okra
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native
+  s.homepage     = "https://github.com/github_account/react-native"
   # brief license entry:
   s.license      = "MIT"
   # optional - use expanded license entry instead:
