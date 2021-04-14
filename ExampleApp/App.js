@@ -8,6 +8,7 @@
 
 import React from 'react';
 import type {Node} from 'react';
+import crashlytics from '@react-native-firebase/crashlytics';
 import {
   SafeAreaView,
   ScrollView,
@@ -63,19 +64,16 @@ const App: () => Node = () => {
     currency: 'NGN',
     env: 'production', // for sandbox use production-sandbox
     exp: '2020-08-06',
-    filter: {
-      banks: ['access-bank', 'guaranty-trust-bank'],
-      industry_type: 'all',
-    },
     options: {saverid: 'this is it'},
     isCorporate: false,
-    key: 'fa85e5ce-0e4e-5a88-883d-9ba9b4357683',
+    key: '4975d560-9979-518e-b552-f33876e3f658',
     limit: '24',
     logo: 'https://cdn.okra.ng/images/icon.svg',
     products: ['auth', 'balance', 'identity', 'transactions'],
     redirect_url: 'redirect',
     success_message: 'this is the success message',
     success_title: 'it has entered success',
+    ussd:true,
     token: '5da6358130a943486f33dced',
     widget_failed: '',
     widget_success: 'Your account was successfully linked to Okra, Inc',

@@ -11,6 +11,8 @@
     "updateLib": "rm -rf node_modules/ && yarn --reset-cache && yarn start"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^11.2.0",
+    "@react-native-firebase/crashlytics": "^11.2.0",
     "okra": "../react-native-okra",
     "react": "17.0.1",
     "react-native": "0.64.0",

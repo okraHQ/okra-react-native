@@ -16,6 +16,14 @@ public class OkraExpoPackage implements ReactPackage {
         return Arrays.<NativeModule>asList(new OkraExpoModule(reactContext));
     }
 
+   // @Override
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+
+
+        return null;
+    }
+
+
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
