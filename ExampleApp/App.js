@@ -66,7 +66,7 @@ const App: () => Node = () => {
     exp: '2020-08-06',
     options: {saverid: 'this is it'},
     isCorporate: false,
-    key: '4975d560-9979-518e-b552-f33876e3f658',
+    key: 'key',
     limit: '24',
     logo: 'https://cdn.okra.ng/images/icon.svg',
     products: ['auth', 'balance', 'identity', 'transactions'],
@@ -74,7 +74,7 @@ const App: () => Node = () => {
     success_message: 'this is the success message',
     success_title: 'it has entered success',
     ussd:true,
-    token: '5da6358130a943486f33dced',
+    token: 'token',
     widget_failed: '',
     widget_success: 'Your account was successfully linked to Okra, Inc',
   };
