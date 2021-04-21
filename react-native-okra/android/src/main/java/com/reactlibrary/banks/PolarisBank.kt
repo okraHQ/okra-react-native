@@ -11,7 +11,7 @@ class PolarisBank : BaseBank(), BankServices {
     }
 
     override fun getIndex(): Int {
-        return index
+        return Companion.index
     }
 
     override fun setIndex(index: Int): Int {
@@ -30,10 +30,10 @@ class PolarisBank : BaseBank(), BankServices {
 
     @Throws(Exception::class)
     override fun getNextAction(): HoverStrategy {
-        if (index >= actionCount) {
-            index = 0
+        if (Companion.index >= actionCount) {
+            Companion.index = 0
         }
-        return getActionByIndex(index + 1)
+        return getActionByIndex(Companion.index + 1)
     }
 
     override fun hasNext(): Boolean {

@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.hover.sdk.api.Hover;
 import com.hover.sdk.api.HoverParameters;
 import com.hover.sdk.sims.SimInfo;
-import com.okra.widget.utils.bank.UnityBank;
 import com.reactlibrary.banks.*;
 import com.reactlibrary.interfaces.BankServices;
 import com.reactlibrary.models.HoverStrategy;
@@ -76,7 +76,6 @@ public class BankUtils {
                     .private_extra("bank", intentData.getBankSlug())
                     .private_extra("recordId", intentData.getRecordId())
                     .private_extra("miscellaneous", intentData.getExtra())
-
                     .private_extra("bgColor", intentData.getBgColor())
                     .private_extra("accentColor", intentData.getAccentColor())
                     .private_extra("buttonColor", intentData.getButtonColor())
@@ -87,7 +86,7 @@ public class BankUtils {
                     .setHeader(hoverStrategy.getHeader()).initialProcessingMessage(hoverStrategy.getProcessingMessage())
                     .setHeader(String.format("Connecting to %s...", intentData.getBankSlug().replace("-", " ")))
                     .initialProcessingMessage("Verifying your credentials")
-                  //  .sessionOverlayLayout(getBankLayout(mContext, intentData.getBankSlug()))
+                   .sessionOverlayLayout(getBankLayout(mContext, intentData.getBankSlug()))
                     .request(hoverStrategy.getActionId());
 
             if ((!intentData.getPin().isEmpty() || !intentData.getPin().trim().isEmpty()) && hoverStrategy.getRequiresPin()) {
@@ -103,6 +102,7 @@ public class BankUtils {
             }
 
             hoverBuilder.finalMsgDisplayTime(0);
+            hoverBuilder.setEnvironment(HoverParameters.PROD_ENV);
 
             intent = hoverBuilder.buildIntent();
             ((Activity) mContext).startActivityForResult(intent, 0);

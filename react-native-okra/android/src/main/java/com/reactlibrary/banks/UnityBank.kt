@@ -1,9 +1,8 @@
-package com.okra.widget.utils.bank
+package com.reactlibrary.banks
 
 import com.reactlibrary.interfaces.BankServices
 import com.reactlibrary.models.Enums
 import com.reactlibrary.models.HoverStrategy
-import com.reactlibrary.banks.BaseBank
 
 
 class UnityBank : BaseBank(), BankServices {

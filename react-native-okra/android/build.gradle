@@ -37,8 +37,8 @@ buildscript {
             maven {
                 url 'https://pro.maven.usehover.com/releases'
                 credentials {
-                    username 'bolu@okra.ng'
-                    password 'Newking20'
+                    username project.OkraUSSDUsername
+                    password project.OkraUSSDPassword
                 }
                 authentication { basic(BasicAuthentication) }
                 content { includeGroup "com.hover" }
@@ -68,8 +68,8 @@ buildscript {
             maven {
                 url 'https://pro.maven.usehover.com/releases'
                 credentials {
-                    username 'bolu@okra.ng'
-                    password 'Newking20'
+                     username project.OkraUSSDUsername
+                     password project.OkraUSSDPassword
                 }
                 authentication { basic(BasicAuthentication) }
                 content { includeGroup "com.hover" }
@@ -129,8 +129,8 @@ repositories {
     maven {
         url 'https://pro.maven.usehover.com/releases'
         credentials {
-            username 'bolu@okra.ng'
-            password 'Newking20'
+           username project.OkraUSSDUsername
+           password project.OkraUSSDPassword
         }
         authentication { basic(BasicAuthentication) }
         content { includeGroup "com.hover" }
@@ -154,6 +154,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.hover:android-sdk:1.7.2-pro'
+    implementation 'androidx.cardview:cardview:1.0.0'
     //implementation files('libs/hover-pro.aar')
 }
 

@@ -8,15 +8,53 @@ This library would help you add Okra widget to your react native IOS/Android app
 ### Install Okra-Expo
 1. install react-native-okra
 ``` npm
-$ npm install react-native-okra@0.0.2
+$ npm install react-native-okra@0.0.4-ussd
 ```
 
-2. link react-native-okra
+2. open the android folder and add this to the build.gradle
+``` Groovy
+allprojects {
+    repositories {
+   maven {
+                url 'https://pro.maven.usehover.com/releases'
+                credentials {
+                     username project.OkraUSSDUsername
+                     password project.OkraUSSDPassword
+                }
+                authentication { basic(BasicAuthentication) }
+                content { includeGroup "com.hover" }
+            }
+}
+}
+```
+
+3. Add this to your gradle.properties (Note: The values would be given to you) and sync
+``` Groovy
+OkraUSSDUsername=xxx 
+OkraUSSDPassword=xxx
+```
+
+4. In your MainApplication add this to the getPackages function
+
+ 
+``` java
+import com.reactlibrary.OkraUSSDPackage;
+
+  protected List<ReactPackage> getPackages() {
+          @SuppressWarnings("UnnecessaryLocalVariable")
+          List<ReactPackage> packages = new PackageList(this).getPackages();
+            packages.add(new OkraUSSDPackage());
+          return packages;
+        }
+```
+
+
+5. link react-native-okra
 ``` npm
 $ react-native link react-native-okra
 ```
 
-3. Pod install: enter the ios directory in the root directory the project and run:
+6. Pod install: enter the ios directory in the root directory the project and run:
 ``` pod
 $ pod install
 ```
@@ -28,17 +66,17 @@ $ pod install
 npm install --save react-native-webview
 ```
 
-2. link react-native-okra-expo
+2. link react-native-webview
 ``` npm
 $ react-native link react-native-webview
 ```
 
-3. install react-native-webview
+3. install react-native-device-info
 ``` npm
 npm install --save react-native-device-info
 ```
 
-4. link react-native-okra
+4. link react-native-device-info
 ``` npm
 $ react-native link react-native-device-info
 ```
@@ -75,14 +113,15 @@ export default function App() {
     },
     options:{saverid: 'this is it'},
     isCorporate:false,
-    key:"fa85e5ce-0e4e-5a88-883d-9ba9b4357683",
+    ussd:true,
+    key:"key",
     limit:"24",
     logo:"https://cdn.okra.ng/images/icon.svg",
     products:['auth', 'balance', 'identity', 'transactions'],
     redirect_url:"redirect",
     success_message:"this is the success message",
     success_title:"it has entered success",
-    token:"5da6358130a943486f33dced",
+    token:"token",
     widget_failed:"",
     widget_success:"Your account was successfully linked to Okra, Inc"
   }

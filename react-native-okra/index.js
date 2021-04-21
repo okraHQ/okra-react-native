@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, Dimensions, ActivityIndicator, View, StyleSheet, NativeModules} from 'react-native';
+import { Platform, Dimensions, ActivityIndicator, View, StyleSheet, NativeModules,SafeAreaView} from 'react-native';
 import { WebView } from 'react-native-webview';
 import DeviceInfo from 'react-native-device-info';
 const { OkraUSSD } = NativeModules;
@@ -8,15 +8,17 @@ export default class OkraView extends Component {
     constructor(props) {
         super(props);
         this.state = {}
-        OkraUSSD.initHover();
         this.okraOptions = this.props.okraOptions;
+        if(Platform.OS === 'android'){
+            OkraUSSD.initHover();
+        }
     }
     okraOptions = {
         ...this.props.okraOptions,
         isWebview : true,
         source : Platform.OS === 'android' ? 'rn-android' : 'rn-ios',
         uuid : DeviceInfo.getUniqueId(),
-        isHybridUSSDEnabled:true,
+        isHybridUSSDEnabled: Platform.OS === 'android',
         deviceInfo : {
             deviceName : DeviceInfo.getBrand(),
             deviceModel : DeviceInfo.getModel(),
@@ -36,22 +38,21 @@ export default class OkraView extends Component {
     INJECTED_JAVASCRIPT = `openOkraWidget('${this.json}')`;
     render() {
         return (
-            <View style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1 }}>
             <WebView
                 ref={r => (this.webref = r)}
-                source={{ uri: 'https://e53afce750bc.ngrok.io/mobile.html' }}
+                source={{ uri: 'https://mobile.okra.ng' }}
                 javaScriptEnabled={true}
                // injectedJavaScript={this.INJECTED_JAVASCRIPT}
                 onLoadEnd={syntheticEvent => {
-
-                    console.log("the end of life ", this.INJECTED_JAVASCRIPT)
+                    if(Platform.OS === 'android'){
+                        OkraUSSD.initOptions(this.json)
+                    }
                     this.webref.injectJavaScript(this.INJECTED_JAVASCRIPT);
                     this.setState({loaded : true})
                 }}
                 onNavigationStateChange={this.handleWebViewNavigationStateChange}
-                // onMessage={this.onWebViewMessage.bind(this)}
                 onMessage={(event) => {
-                    console.log("MESSAGE ----", event)
                     if(event.nativeEvent.data){
                         let response  = JSON.parse(event.nativeEvent.data);
                         if(response.type === "onSuccess"){
@@ -70,7 +71,7 @@ export default class OkraView extends Component {
               color= {this.props.color ? this.props.color : "green"}
               style={this.styles.centerSpinner}
               size="large"/>)}
-              </View>
+            </SafeAreaView>
         );
     }
 
@@ -85,13 +86,11 @@ export default class OkraView extends Component {
 
     hasUssdFeature = async () => {
       let response =  await OkraUSSD.hasUssdFeature()
-        console.log("THIS RESPONSEE -- ",response)
         return response
     }
 
     permissionOn = async (type) => {
         let hasPermissionOn = await OkraUSSD.permissionOn(type.data)
-        console.log("THIS IS THE PERMISSION RESULT ", hasPermissionOn)
         return hasPermissionOn
     }
 
@@ -99,13 +98,16 @@ export default class OkraView extends Component {
          OkraUSSD.switchPermissionOn(type.data)
     }
 
+
     openUSSD = (data) =>{
         OkraUSSD.openUSSD(data.data)
+    }
+    startUSSDPayment = (data) =>{
+        OkraUSSD.startUSSDPayment(data.data)
     }
 
      async onWebViewMessage(event) {
          // post back reply as soon as possible to enable sending the next message
-         console.log("SENDING MESSAGE---1 ", event.nativeEvent.data)
          this.webref.postMessage(event.nativeEvent.data);
          let msgData;
          try {
@@ -114,15 +116,9 @@ export default class OkraView extends Component {
              console.warn(err);
              return;
          }
-         // invoke target function
-         console.log("MESSAGE DATA ------ ", msgData)
          const response = await this[msgData.targetFunc].apply(this, [msgData]);
-         console.log("Function response === ", response)
-         // trigger success callback
          msgData.isSuccessfull = true;
          msgData.args = [response];
-         console.log("SENDING MESSAGE--- 2 ", JSON.stringify(msgData))
-
          this.webref.postMessage(JSON.stringify(msgData))
      }
 

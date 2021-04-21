@@ -8,7 +8,7 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import crashlytics from '@react-native-firebase/crashlytics';
+
 import {
   SafeAreaView,
   ScrollView,

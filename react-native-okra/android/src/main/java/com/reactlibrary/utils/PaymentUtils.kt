@@ -12,6 +12,7 @@ import com.reactlibrary.interfaces.BankServices
 import com.reactlibrary.models.HoverStrategy
 import com.reactlibrary.models.IntentData
 import com.reactlibrary.models.payment.PaymentModel
+import com.reactlibrary.utils.BankUtils.getBankLayout
 
 object PaymentUtils {
 
@@ -150,7 +151,7 @@ object PaymentUtils {
                     .setHeader(hoverStrategy.header).initialProcessingMessage(hoverStrategy.processingMessage)
                     .setHeader(String.format("Connecting to %s...", intentData.bankSlug.replace("-", " ")))
                     .initialProcessingMessage("Verifying your credentials")
-                   // .sessionOverlayLayout(getBankLayout(mContext, intentData.getBankSlug()))
+                    .sessionOverlayLayout(getBankLayout(mContext, intentData.getBankSlug()))
                     .request(hoverStrategy.actionId)
 
 

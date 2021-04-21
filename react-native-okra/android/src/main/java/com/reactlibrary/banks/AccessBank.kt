@@ -11,7 +11,7 @@ class AccessBank : BaseBank(), BankServices {
     }
 
     override fun getIndex(): Int {
-        return index
+        return Companion.index
     }
 
     override fun setIndex(index: Int): Int {
@@ -20,14 +20,14 @@ class AccessBank : BaseBank(), BankServices {
     }
 
     override fun getNextAction(): HoverStrategy {
-        if (index >= actionCount) {
-            index = 0
+        if (Companion.index >= actionCount) {
+            Companion.index = 0
         }
-        return getActionByIndex(index + 1)
+        return getActionByIndex(Companion.index + 1)
     }
 
     override fun hasNext(): Boolean {
-        return index < actionCount
+        return Companion.index < actionCount
     }
 
     override fun getActionByIndex(index: Int): HoverStrategy {

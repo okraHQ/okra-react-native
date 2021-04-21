@@ -11,7 +11,7 @@ class FCMB : BaseBank(), BankServices {
     }
 
     override fun getIndex(): Int {
-        return index
+        return Companion.index
     }
 
     override fun setIndex(index: Int): Int {

@@ -1,4 +1,4 @@
-package com.exampleapp;
+package com.okraexampleapp;
 
 import com.facebook.react.ReactActivity;
 

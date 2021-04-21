@@ -7,7 +7,6 @@ import android.os.CountDownTimer
 import android.util.Log
 import com.hover.sdk.api.Hover
 import com.hover.sdk.sims.SimInfo
-import com.okra.widget.utils.bank.*
 import com.reactlibrary.banks.*
 import com.reactlibrary.interfaces.BankServices
 import com.reactlibrary.models.IntentData

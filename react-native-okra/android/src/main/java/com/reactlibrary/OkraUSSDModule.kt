@@ -2,22 +2,31 @@ package com.reactlibrary
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import com.facebook.react.bridge.*
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.hover.sdk.api.Hover
+import com.hover.sdk.api.HoverParameters
 import com.hover.sdk.permissions.PermissionHelper
 import com.reactlibrary.interfaces.BankServices
 import com.reactlibrary.models.IntentData
+import com.reactlibrary.services.USSDActionDeterminer
+import com.reactlibrary.services.USSDActionDeterminerImpl
 import com.reactlibrary.utils.BankUtils
 import com.reactlibrary.utils.PaymentUtils
 import org.json.JSONObject
+import java.lang.reflect.Type
 
 
 class OkraUSSDModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext){
     private var mActivityEventListener: ActivityEventListener? = null
+    var generalmapOkraOptions: MutableMap<String, Any>? = null
+    private var ussdActionDeterminer: USSDActionDeterminer? = null
     init {
           mActivityEventListener = object : BaseActivityEventListener() {
             override fun onActivityResult(activity: Activity?, requestCode: Int, resultCode: Int, intent: Intent) {
-                println("ON ACTIVITY RESULT")
+                generalmapOkraOptions?.let { ussdActionDeterminer?.onUSDDResultReceived(intent, it) }
             }
         }
         reactContext.addActivityEventListener(mActivityEventListener)
@@ -34,9 +43,18 @@ class OkraUSSDModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
 
     @ReactMethod
     fun initHover() {
-        println("HOVER WAS INITIALIZED")
         Hover.initialize(reactApplicationContext)
+        ussdActionDeterminer = currentActivity?.let { USSDActionDeterminerImpl(it) }
     }
+
+    @ReactMethod
+    fun initOptions(options:String){
+        val type: Type = object : TypeToken<MutableMap<String, Any>>() {}.type
+        val myMap: MutableMap<String, Any> = Gson().fromJson(options, type)
+        generalmapOkraOptions = myMap
+    }
+
+
 
 
 
@@ -85,8 +103,9 @@ class OkraUSSDModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
 
     @ReactMethod
     fun startUSSDPayment(json:String){
+
         try {
-            PaymentUtils.startPayment(json, reactApplicationContext)
+            PaymentUtils.startPayment(json, currentActivity!!)
         } catch (ex: Exception) {
             println(ex)
         }
