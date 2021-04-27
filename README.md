@@ -17,7 +17,7 @@ Checkout the [widget flow](https://okra.ng/) to view how the Okra Widget works. 
 This library would help you add Okra widget to your react native IOS/Android app in no time. This is a react native library for **non-expo** users to help implement okra widget. If you are an expo user, [click here](https://github.com/okraHQ/react-native-expo)
 
 
-### Install Reach Native Okra Widget
+### Install React Native Okra Widget
 1. install react-native-okra
 ``` npm
 $ npm install react-native-okra@0.0.2
