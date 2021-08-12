@@ -70,7 +70,7 @@ $ pod install
 ``` javascript
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import OkraView from 'react-native-okra-expo';
+import OkraView from "react-native-okra";
 
 export default function App() {
   var okraOptions = {
