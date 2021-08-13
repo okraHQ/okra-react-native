@@ -24,7 +24,7 @@ export default class OkraView extends Component {
             platform : Platform.OS
         }
     };
-    
+
     width = Math.round(Dimensions.get('window').width);
     height = Math.round(Dimensions.get('window').height);
 
@@ -36,11 +36,10 @@ export default class OkraView extends Component {
             <View style={{ flex: 1 }}>
             <WebView
                 ref={r => (this.webref = r)}
-                source={{ uri: 'https://v2-mobile.okra.ng/' }}
+                source={{ uri: 'https://v3-mobile.okra.ng/mobile.html' }}
                 javaScriptEnabled={true}
                 injectedJavaScript={this.INJECTED_JAVASCRIPT}
                 onLoadEnd={syntheticEvent => {
-                    console.log("the end of life ", this.INJECTED_JAVASCRIPT)
                     this.webref.injectJavaScript(this.INJECTED_JAVASCRIPT);
                     this.setState({loaded : true})
                 }}
